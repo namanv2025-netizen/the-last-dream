@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b13">
+  <meta name="description" content="The Last Dream — an interactive fantasy story about a world that is disappearing one dream at a time.">
+  <title>THE LAST DREAM — An Interactive Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="progress-track"><span id="reading-progress"></span></div>
+  <header class="topbar">
+    <a class="wordmark" href="#home" aria-label="The Last Dream home"> THE LAST DREAM</a>
+    <div class="topbar-right">
+      <span class="chapter-status" id="chapter-status">PROLOGUE / 07</span>
+      <button class="sound-toggle" id="motion-toggle" type="button" aria-pressed="false" title="Pause motion"><span class="motion-bars"><i></i><i></i><i></i></span><span id="motion-label">MOTION ON</span></button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="chapter-menu" aria-label="Open chapter menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="chapter-menu" id="chapter-menu" aria-label="Chapter navigation">
+    <p class="eyebrow">JUMP THROUGH THE DREAM</p>
+    <a href="#home">00 <span>The call</span></a><a href="#threshold">01 <span>The threshold</span></a><a href="#woods">02 <span>The listening woods</span></a><a href="#lake">03 <span>The lake of almosts</span></a><a href="#echoes">04 <span>The house of echoes</span></a><a href="#crossing">05 <span>The bridge between</span></a><a href="#choices">06 <span>Choose a truth</span></a><a href="#citadel">06 <span>The sleeping citadel</span></a><a href="#ending">07 <span>What remains</span></a><a href="#citadel">05 <span>The sleeping citadel</span></a><a href="#ending">06 <span>What remains</span></a>
+  </nav>
+
+  <main>
+    <section class="hero scene" id="home" data-chapter="PROLOGUE / 07">
+      <div class="hero-sky" aria-hidden="true"><div class="moon"></div><div class="moon-halo"></div><div class="hero-planet"></div><div class="hero-cloud cloud-one"></div><div class="hero-cloud cloud-two"></div><div class="hero-ridge ridge-back"></div><div class="hero-ridge ridge-front"></div></div>
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A STORY ABOUT THE THINGS WE KEEP</p>
+        <h1 class="hero-title reveal"><span>THE LAST</span><em>DREAM</em></h1>
+        <p class="hero-subtitle reveal">Somewhere between the world you know<br>and the world you almost remember.</p>
+        <a class="round-link reveal" href="#threshold"><span class="round-arrow">↓</span><span>ENTER THE DREAM</span></a>
+      </div>
+      <div class="hero-side-note">AN INTERACTIVE FABLE · 7 CHAPTERS</div>
+      <div class="hero-bottom"><span>SCROLL TO DESCEND</span><span class="scroll-line"></span><span>01 / 07</span></div>
+      <div class="hero-orbit orbit-a" aria-hidden="true"></div><div class="hero-orbit orbit-b" aria-hidden="true"></div>
+    </section>
+
+    <section class="intro section-pad scene" id="threshold" data-chapter="01 / THE THRESHOLD">
+      <div class="section-index reveal"><span>01</span><span>THE THRESHOLD</span></div>
+      <div class="intro-grid">
+        <div class="intro-title reveal"><p class="eyebrow">THE NIGHT THE STARS WENT QUIET</p><h2>Every night,<br>the world <em>forgets.</em></h2></div>
+        <div class="intro-text reveal"><p>At 2:17 a.m., every sleeping person in the city dreamed of the same door.</p><p>At 2:18, the stars above the northern quarter began to disappear. Not one by one — but as if a careful hand were erasing them from a page.</p><p>And at 2:19, Mira heard her brother call her name from a dream he had been missing for seven years.</p><span class="pull-quote">“If you can still hear me,<br>the door is not yet closed.”</span><p class="small-copy">She had not heard Eli’s voice since the winter he vanished. She was certain of that. Dreams, however, are not known for respecting certainty.</p></div>
+      </div>
+      <div class="threshold-art" aria-label="A glowing door standing alone in a dark dream landscape"><div class="threshold-haze"></div><div class="door-frame"><div class="door-inner"><span class="door-knob"></span><span class="door-light"></span></div></div><div class="door-shadow"></div><span class="art-caption">THE DOOR APPEARS ONLY TO THOSE WHO HAVE LOST SOMETHING.</span></div>
+    </section>
+
+    <section class="woods scene" id="woods" data-chapter="02 / THE LISTENING WOODS">
+      <div class="woods-backdrop"><div class="woods-moon"></div><div class="tree-layer tree-layer-back"></div><div class="tree-layer tree-layer-front"></div><div class="firefly-field" aria-hidden="true"></div></div>
+      <div class="woods-content section-pad">
+        <div class="section-index reveal"><span>02</span><span>THE LISTENING WOODS</span></div>
+        <p class="eyebrow reveal">A PLACE THAT REMEMBERS YOUR FOOTSTEPS</p>
+        <h2 class="woods-title reveal">The trees knew<br>her <em>secrets.</em></h2>
+        <div class="woods-lower"><p class="reveal">Beyond the door, Mira found a forest growing upside down. Its roots disappeared into a violet sky; its branches held small, dim stars like fruit that had forgotten how to shine.</p><p class="reveal">The path beneath her feet whispered in familiar voices. Her mother laughing. Eli counting backwards. Mira herself, much younger, promising never to be afraid of the dark.</p></div>
+        <button class="text-button reveal" id="listen-button" type="button"><span class="button-orb">◉</span> LISTEN TO THE TREES <span class="button-arrow">↗</span></button>
+        <div class="whisper-card" id="whisper-card" hidden><span class="eyebrow">A WHISPER, CAUGHT</span><p id="whisper-text">“You cannot rescue what you refuse to remember.”</p><button class="quiet-button" id="whisper-close" type="button">LET IT FADE ×</button></div>
+      </div>
+      <span class="vertical-label">NOTHING LOST IS EVER ENTIRELY GONE</span>
+    </section>
+
+    <section class="lake section-pad scene" id="lake" data-chapter="03 / THE LAKE OF ALMOSTS">
+      <div class="section-index reveal"><span>03</span><span>THE LAKE OF ALMOSTS</span></div>
+      <div class="lake-heading reveal"><p class="eyebrow">EVERY UNMADE CHOICE LIVES HERE</p><h2>A thousand lives<br>she <em>almost lived.</em></h2></div>
+      <div class="lake-visual reveal"><div class="lake-sky"><span class="lake-star s1"></span><span class="lake-star s2"></span><span class="lake-star s3"></span><span class="lake-star s4"></span></div><div class="lake-water"><div class="water-ripple ripple-one"></div><div class="water-ripple ripple-two"></div><div class="water-ripple ripple-three"></div></div><div class="lake-person"></div><div class="reflection-person"></div><div class="lake-caption">THE LAKE DOES NOT SHOW THE FUTURE.<br>IT SHOWS THE SHAPE OF A CHOICE.</div></div>
+      <div class="lake-bottom"><p class="reveal">At the shore stood a figure made entirely of reflected moonlight. It offered Mira three memories, each one a door that had once been open.</p><p class="reveal">“You may take one,” it said. “But understand: a memory is not a map back. It is a lantern for the road ahead.”</p></div>
+      <div class="memory-cards" id="memory-cards">
+        <button class="memory-card reveal" data-memory="home" type="button"><span class="memory-number">MEMORY 01</span><span class="memory-symbol">⌂</span><strong>The House in Summer</strong><span class="memory-description">A kitchen full of warm light, before anyone learned to leave.</span><span class="memory-open">TOUCH THE WATER ↗</span></button>
+        <button class="memory-card reveal" data-memory="brother" type="button"><span class="memory-number">MEMORY 02</span><span class="memory-symbol">☾</span><strong>Eli’s Last Promise</strong><span class="memory-description">A rooftop, a paper moon, and a promise neither kept.</span><span class="memory-open">TOUCH THE WATER ↗</span></button>
+        <button class="memory-card reveal" data-memory="self" type="button"><span class="memory-number">MEMORY 03</span><span class="memory-symbol">✳</span><strong>The Girl Who Stayed</strong><span class="memory-description">The life Mira built by learning to call loneliness peace.</span><span class="memory-open">TOUCH THE WATER ↗</span></button>
+      </div>
+      <div class="memory-reveal" id="memory-reveal" aria-live="polite" hidden><button class="memory-close" id="memory-close" type="button" aria-label="Close memory">×</button><p class="eyebrow" id="memory-kicker">A MEMORY SURFACES</p><h3 id="memory-title">The House in Summer</h3><p id="memory-body"></p><span class="memory-footnote">A MEMORY IS A LANTERN, NOT A MAP.</span></div>
+    </section>
+
+
+    <section class="echoes scene" id="echoes" data-chapter="04 / THE HOUSE OF ECHOES">
+      <div class="echoes-art" aria-hidden="true"><div class="echoes-window"></div><div class="echoes-orb orb-a"></div><div class="echoes-orb orb-b"></div><div class="echoes-orb orb-c"></div></div>
+      <div class="echoes-copy section-pad">
+        <div class="section-index reveal"><span>04</span><span>THE HOUSE OF ECHOES</span></div>
+        <p class="eyebrow reveal">A PLACE BUILT FROM WHAT WE REMEMBER</p>
+        <h2 class="reveal">Every room held<br>a <em>different goodbye.</em></h2>
+        <div class="echoes-body reveal"><p>Mira found the house where the forest ended. Its windows glowed with scenes from lives she had never lived: a birthday candle, a train pulling away, a hand letting go of another hand.</p><p>At the centre stood a small table. On it lay Eli’s blue scarf, still damp with snow from the winter he disappeared.</p><p>She reached for it. The room exhaled. Every memory turned to face her.</p></div>
+        <button class="text-button reveal" id="echo-button" type="button"><span class="button-orb">✧</span> TOUCH THE SCARF <span class="button-arrow">↗</span></button>
+        <div class="echo-note" id="echo-note" hidden><p>For one second, Mira was seven years younger. Eli was beside her, laughing at a joke she had forgotten. Then the memory folded shut, leaving only warmth in her palm.</p></div>
+      </div>
+    </section>
+
+    <section class="crossing scene" id="crossing" data-chapter="THE CROSSING">
+      <div class="crossing-sky" aria-hidden="true"><div class="crossing-moon"></div><div class="crossing-bridge"></div><div class="crossing-water"></div></div>
+      <div class="crossing-copy section-pad">
+        <div class="section-index reveal"><span>05</span><span>THE BRIDGE BETWEEN</span></div>
+        <p class="eyebrow reveal">THE WAY FORWARD IS NEVER THE WAY BACK</p>
+        <h2 class="reveal">The bridge appeared<br>when she stopped <em>running.</em></h2>
+        <p class="crossing-text reveal">Across the lake, a bridge of pale stone reached toward a city hanging upside down in the sky. Each step brought a memory back: Eli stealing pears from the neighbour’s garden, Eli teaching her the names of constellations, Eli promising he would never leave.</p>
+        <p class="crossing-text reveal">At the final stone, Mira understood the cruel trick of the dream. It was not asking her to find the past. It was asking what she would carry into tomorrow.</p>
+      </div>
+    </section>
+
+    <section class="choice-section section-pad scene" id="choices" data-chapter="06 / CHOOSE A TRUTH">
+      <div class="choice-stars" aria-hidden="true"></div><div class="section-index reveal"><span>04</span><span>CHOOSE A TRUTH</span></div>
+      <div class="choice-center"><p class="eyebrow reveal">THE DREAM IS LISTENING</p><h2 class="reveal">What will Mira<br><em>carry forward?</em></h2><p class="choice-instruction reveal">The forest has brought her to a fork in the world. Choose carefully. The story will remember.</p></div>
+      <div class="choice-grid" id="choice-grid">
+        <button class="choice-card reveal" type="button" data-choice="light"><span class="choice-icon">✦</span><span class="choice-label">PATH A / THE LIGHT</span><strong>Follow the stars</strong><span>Trust the beautiful thing, even when it asks for courage.</span><span class="choice-cta">CHOOSE THIS PATH ↗</span></button>
+        <button class="choice-card reveal" type="button" data-choice="shadow"><span class="choice-icon">◐</span><span class="choice-label">PATH B / THE SHADOW</span><strong>Follow the voice</strong><span>Trust the difficult truth, even when it changes everything.</span><span class="choice-cta">CHOOSE THIS PATH ↗</span></button>
+        <button class="choice-card reveal" type="button" data-choice="memory"><span class="choice-icon">❋</span><span class="choice-label">PATH C / THE MEMORY</span><strong>Keep the promise</strong><span>Trust what she remembers, even when memory is incomplete.</span><span class="choice-cta">CHOOSE THIS PATH ↗</span></button>
+      </div>
+      <div class="choice-result" id="choice-result" aria-live="polite" hidden><span class="eyebrow" id="result-eyebrow">YOUR PATH HAS BEGUN</span><h3 id="result-title">The light bends toward her.</h3><p id="result-text"></p><div class="result-actions"><button class="primary-button" id="continue-choice" type="button">CONTINUE THE STORY <span>↓</span></button><button class="quiet-button" id="reset-choice" type="button">CHOOSE AGAIN ↺</button></div></div>
+    </section>
+
+    <section class="citadel scene" id="citadel" data-chapter="07 / THE SLEEPING CITADEL">
+      <div class="citadel-sky"><div class="citadel-moon"></div><div class="citadel-stars"></div><div class="citadel-mountain"></div><div class="citadel-castle"><div class="castle-tower t1"></div><div class="castle-tower t2"></div><div class="castle-tower t3"></div><div class="castle-body"></div><div class="castle-window w1"></div><div class="castle-window w2"></div><div class="castle-window w3"></div></div><div class="citadel-bridge"></div></div>
+      <div class="citadel-copy section-pad"><div class="section-index reveal"><span>05</span><span>THE SLEEPING CITADEL</span></div><p class="eyebrow reveal">AT THE EDGE OF EVERY ENDING</p><h2 class="reveal">The keeper of<br><em>almost.</em></h2><div class="citadel-text reveal"><p>The citadel was built from the dreams people abandoned when morning came. Its towers held forgotten birthdays, unsent letters, apologies rehearsed in the shower, and the small brave futures no one ever tried.</p><p>At its highest window waited the Keeper — a child with Eli’s eyes and a crown of extinguished stars.</p><p>“You came to bring me home,” he said. “But you have mistaken the place I am for the person I was.”</p></div><button class="reveal text-button" id="keeper-button" type="button"><span class="button-orb">✧</span> ASK THE KEEPER <span class="button-arrow">↗</span></button><div class="keeper-dialogue" id="keeper-dialogue" hidden aria-live="polite"><p id="keeper-line">“If I return, the dreams that live here will vanish. If I stay, you will forget my face.”</p><div class="keeper-answers"><button type="button" data-answer="release">“Then I will remember you differently.”</button><button type="button" data-answer="hold">“I came too far to lose you again.”</button></div><p class="keeper-response" id="keeper-response" hidden></p></div></div>
+    </section>
+
+    <section class="ending section-pad scene" id="ending" data-chapter="08 / WHAT REMAINS">
+      <div class="ending-glow" aria-hidden="true"></div><div class="ending-content"><div class="section-index reveal"><span>06</span><span>WHAT REMAINS</span></div><p class="eyebrow reveal">EVERY DREAM ENDS SOMEWHERE</p><h2 class="ending-title reveal">Some things are<br>lost. Some things<br><em>become light.</em></h2><div class="ending-story reveal" id="ending-story"><p>When Mira woke, the stars were back. The city slept on, unaware of the door that had opened inside the night.</p><p>On her windowsill lay a paper moon, folded from a page of her old notebook. Inside, in handwriting she knew better than her own, were five words:</p><blockquote>“You were never meant to stay.”</blockquote><p>She cried until the morning made a soft gold line across the floor. Then she opened the curtains. For the first time in seven years, she did not look toward the place where Eli had disappeared.</p></div><div class="ending-path-note" id="ending-path-note" hidden></div><div class="ending-actions reveal"><button class="primary-button" id="replay-button" type="button">DREAM AGAIN <span>↺</span></button><button class="text-button" id="credits-button" type="button">READ THE LAST NOTE <span class="button-arrow">↗</span></button></div><div class="last-note" id="last-note" hidden><p>For everyone who has ever mistaken holding on for love: may you find a softer way to remember.</p><span>— THE KEEPER</span></div><div class="ending-mark">✳</div><p class="end-credit">THE LAST DREAM <span>·</span> AN INTERACTIVE FABLE</p></div>
+    </section>
+  </main>
+  <button class="back-top" id="back-top" type="button" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">This story uses JavaScript for its interactive chapters. Please enable JavaScript to experience the full story.</p></noscript>
+</body>
+</html>
