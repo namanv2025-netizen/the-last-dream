@@ -1,3 +1,9 @@
+
+<p align="center">
+  <img src="https://i.ibb.co/N2yLTbz9/Screenshot-2026-10-23-152320.png" alt="Notebook" width="900">
+</p>
+
+
 # The Last Dream
 
 *The Last Dream is a dark fantasy storytelling website built with HTML, CSS and JavaScript. It takes you through a mysterious world where dreams, memories and choices shape the story.*
